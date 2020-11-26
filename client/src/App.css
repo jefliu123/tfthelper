@@ -1,21 +1,23 @@
 .App {
-  text-align: center;
+  text-align: Center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 40px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: rgb(12, 121, 245);
+  height: 70px;
   padding: 20px;
   color: white;
+  grid-auto-flow: row;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, "Advent Pro", Arial, Helvetica, sans-serif;
+  font-size: 200 em;
+  color: rgb(224, 162, 28);
 }
 
 .App-intro {

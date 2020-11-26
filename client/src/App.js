@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import logo from "./Teamfight_Tactics_logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to Rfasdfadsfasdfasdfasdfeact</h1>
+                    <div className="App-title">ONE-TRICK FINDER</div>
                 </header>
                 <p className="App-intro">{this.state.apiResponse}</p>
             </div>
