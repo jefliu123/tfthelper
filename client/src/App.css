@@ -24,6 +24,34 @@
   font-size: large;
 }
 
+.finder-body {
+  padding: 20px;
+}
+
+.finder-input {
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+
+.finder-submit {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, "Advent Pro", Arial, Helvetica, sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.submit-form {
+  width: 100%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
