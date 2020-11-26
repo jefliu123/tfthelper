@@ -9,7 +9,7 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("http://localhost:9000/testAPI")
+        fetch("http://192.168.163.43:3006/testAPI")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
@@ -24,7 +24,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
+                    <h1 className="App-title">Welcome to Rfasdfadsfasdfasdfasdfeact</h1>
                 </header>
                 <p className="App-intro">{this.state.apiResponse}</p>
             </div>
