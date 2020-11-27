@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
+import APIData from "./APIData.js";
 
 export default class OneTrickFinder extends Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: "", username: "" };
+        this.state = { username: "", apiResponse: "nononono", showData: false};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,8 +16,9 @@ export default class OneTrickFinder extends Component {
     }
 
     handleSubmit(event) {
-        //call API
         event.preventDefault();
+        this.callAPI();
+        this.setState({showData: true});
     }
 
     callAPI() {
@@ -26,20 +28,19 @@ export default class OneTrickFinder extends Component {
             .catch(err => err);
     }
 
-    componentDidMount() {
-        this.callAPI();
-    }
-
     render() {
         return (
+            
             <div class= "finder-body">
-            <form class="submit-form" onSubmit={this.handleSubmit}>
-                <input class= "finder-input" type="text" placeholder="Search Summoner Name" value={this.state.value} onChange={this.handleChange} />
-                <input class= "finder-submit" type="submit" value="GO" />
-                <p>{this.state.username}</p>
-            </form>
-            <p className="App-intro">{this.state.apiResponse}</p>
+                <form class="submit-form" onSubmit={this.handleSubmit}>
+                    <input class= "finder-input" type="text" placeholder="Enter Summoner Name" value={this.state.value} onChange={this.handleChange} />
+                    <input class= "finder-submit" type="submit" value="GO" />
+                    <p>{this.state.username}</p>
+                </form>
+                <p className="App-intro">{this.state.apiResponse}</p>
+                {this.state.showData && <APIData parentResponse = {this.state.apiResponse}/>}
             </div>
+            
         );
     }
 }
