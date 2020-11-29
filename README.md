@@ -1,27 +1,30 @@
-# React_Express_App_Medium_Tutorial
-- This repository has the code to support a tutorial that I created on Medium called Create a React FrontEnd, a Node/Express BackEnd and connect them together.
-- This repository can also be used as a starting point (boilerplate), if you whant to create your own React/Express app.
-.
+# TFT Helper (WIP)
 
-## Where can I check the tutorial?
-You are very welcome to check the tutorial on Medium. Just follow the link below.
-- [Create a React FrontEnd, a Node/Express BackEnd and connect them together](https://medium.com/@jrshenrique/create-a-react-frontend-a-node-express-backend-and-connect-them-together-c5798926047c)
+## Description
+TFT Helper analyzes a player's TFT match history and displays their most used carries as well as tips for their playstyle.
+- Data taken from [RIOT API](https://developer.riotgames.com/)
 
 ## About the app
-Actually, there are two separated apps. The Client which serves the FrontEnd (using React), and the API (in Node/Express).
+The current application is seperated into a frontend (client) and backend (api) which are both run locally. 
+The frontend is a simple React application that prompts the user for their summoner name. The backend then makes API calls 
+to the Riot's API and sends parsed player information back to the frontend to display.  
+  
+Currently, there is one backend route that returns a player's carried champion(s) in their past 10 games, but there are 
+plans to utilize the API even further to display additional analysis on item choice, trait tendencies, etc.
 
-## How to run the API
+## How To Run
 1. In your terminal, navigate to the `api` directory.
 2. Run `npm install` to install all dependencies.
-3. Run `npm start` to start the app.
+3. Run `npm start` to start the server.
+4. In another terminal, navigate to the `client` directory.
+5. Run `npm install` to install all dependencies.
+6. Run `npm start` to start the client
 
-## How to run the Client
-1. In another terminal, navigate to the `client` directory.
-2. Run `npm install` to install all dependencies.
-3. Run `npm start` to start the app
+## Technologies
+- [React JS](https://reactjs.org/)
+- [Express](https://expressjs.com/)
 
-## Check if they are connected
-1. With the two apps running, open your browser in http://localhost:3000/.
-2. If you see a webpage saying `Welcome to React`, it means the FrontEnd is working.
-3. If the same webpage has the phrase `API is working properly`, it means the API is working.
-4. Enjoy!
+## TODO
+- Documentation and inline comments on backend route/scripts
+- Displaying carried champions w/ frequency
+- Adding additional tips based on most carried champion(s)
