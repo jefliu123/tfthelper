@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./Teamfight_Tactics_logo.svg";
 import "./App.css";
 
-import OneTrickFinder from './OneTrickFinder';
+import NameSearch from './nameSearch';
 
 class App extends Component {
     render() {
@@ -10,9 +10,9 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <div className="App-title">ONE-TRICK FINDER</div>
+                    <div className="App-title">Match History Analyst</div>
                 </header>
-                <OneTrickFinder />
+                <NameSearch />
             </div>
         );
     }

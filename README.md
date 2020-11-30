@@ -1,4 +1,4 @@
-# TFT Helper (WIP)
+# TFT Helper
 
 ## Description
 TFT Helper analyzes a player's TFT match history and displays their most used carries as well as tips for their playstyle.
@@ -25,6 +25,4 @@ plans to utilize the API even further to display additional analysis on item cho
 - [Express](https://expressjs.com/)
 
 ## TODO
-- Documentation and inline comments on backend route/scripts
-- Displaying carried champions w/ frequency
-- Adding additional tips based on most carried champion(s)
+- Documentation and inline comments on everything
