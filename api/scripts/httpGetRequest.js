@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const api_key = 'RGAPI-c1bf63cb-2ece-4b58-bc7a-6d23bb4ad16f'; //UPDATE EVERYDAY
+const api_key = 'RGAPI-ce08ebd6-8807-4678-8e8f-8bdf3a7d9796'; //UPDATE EVERYDAY
 
 function checkStatus(res){
     if(res.status == 200)
