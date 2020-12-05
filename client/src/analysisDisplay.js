@@ -23,10 +23,10 @@ export default class AnalysisDisplay extends Component {
             championsData = this.props.parentResponse.champions;
             var championsArray = Object.entries(championsData);
             championsArray.sort((x, y) => y[1].freq - x[1].freq);
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 5; i++) {
                 if (i === 0) {
                     mostUsedCarry = championsArray[i][0];
-                    if (championsArray[i][1].freq > 3) {
+                    if (championsArray[i][1].freq > 4) {
                         abuser = true;
                     }
                 }

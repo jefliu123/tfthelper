@@ -26,7 +26,10 @@
 }
 
 .finder-body {
-  padding: 20px;
+  margin: 20px;
+  background-color: gainsboro;
+  border-style: solid;
+  border-color: darkgrey;
 }
 
 .finder-input {
@@ -70,8 +73,7 @@
   padding: 10px;
   border-color: transparent;
   border-style: solid;
-  border-radius: 10px;
-  background-color: gainsboro;
+  background-color: #f7e5e8;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -93,8 +95,9 @@
   margin: 5px;
   padding-top: 10px;
   padding-bottom: 5px;
-  border-radius: 5px;
   font-size: smaller;
+  border-style: solid;
+  border-color: darkgrey;
 }
 
 .Champion-icon{
