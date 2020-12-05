@@ -32,6 +32,7 @@ getMatchInfo = function (matchId) {
         });
 }
 
+/*
 exports.getMostUsedCarries = function (summonerName) {
     return getPuuidAndMatchListFromName(summonerName)
         .then(function(response) {
@@ -55,6 +56,51 @@ exports.getMostUsedCarries = function (summonerName) {
                                     }
                                     else {
                                         returnObj[unit.character_id] = 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                return JSON.stringify(returnObj);
+            });
+        });
+}
+*/
+
+exports.getMostUsedCarries = function (summonerName) {
+    return getPuuidAndMatchListFromName(summonerName)
+        .then(function(response) {
+            var puuid = response[0];
+            let promises = [];
+            for (i = 0; i < 10; i++) {
+                promises.push(getMatchInfo(response[1][i]));
+            }
+            return Promise.all(promises).then(function(results) {
+                let returnObj = { champions: { } };
+                for (j = 0; j < 10; j++) {
+                    let participantsList = results[j].info.participants
+                    for (k = 0; k < 8; k++) {
+                        let participant = participantsList[k];
+                        if (participant.puuid == puuid) {
+                            for (m = 0; m < participant.units.length; m++) {
+                                let unit = participant.units[m];
+                                if (unit.items.length > 1) {
+                                    if (unit.character_id in returnObj['champions']) {
+                                        returnObj['champions'][unit.character_id]['freq'] += 1;
+                                    }
+                                    else {
+                                        returnObj['champions'][unit.character_id] = { };
+                                        returnObj['champions'][unit.character_id]['freq'] = 1;
+                                        returnObj['champions'][unit.character_id]['items'] = { };
+                                    }
+                                    for (const item of unit.items) {
+                                        if (item in returnObj['champions'][unit.character_id]['items']) {
+                                            returnObj['champions'][unit.character_id]['items'][item] += 1;
+                                        }
+                                        else {
+                                            returnObj['champions'][unit.character_id]['items'][item] = 1;
+                                        }
                                     }
                                 }
                             }
