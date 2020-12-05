@@ -1,126 +1,153 @@
+@font-face {
+	font-family: "NotoSans";
+	src: url("./fonts/NotoSans-Bold.ttf") format("truetype");
+}
+
 .App {
-  text-align: Center;
-  zoom: 1.9;
+	text-align: Center;
+	zoom: 1.9;
 }
 
 .App-logo {
-  height: 40px;
+	height: 40px;
 }
 
 .App-header {
-  background-color: rgb(12, 121, 245);
-  height: 70px;
-  padding: 20px;
-  color: white;
-  grid-auto-flow: row;
+	background-color: #1b1b1b;
+	height: 70px;
+	padding: 20px;
+	color: white;
+	grid-auto-flow: row;
+}
+
+.App-top {
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .App-title {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, "Advent Pro", Arial, Helvetica, sans-serif;
-  font-size: 200 em;
-  color: rgb(224, 162, 28);
+	font-family: NotoSans, Impact, Haettenschweiler, "Arial Narrow Bold",
+		sans-serif, "Advent Pro", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: rgb(224, 162, 28);
+	padding-top: 4px;
+	border-color: white;
+	border-style: solid;
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 0;
+	width: 80%;
+	margin: auto;
+}
+
+.App-logoAndTitle {
+	margin: 5px;
+	width: 200px;
+	float: left;
 }
 
 .App-intro {
-  font-size: large;
+	font-size: large;
 }
 
 .finder-body {
-  margin: 20px;
-  background-color: gainsboro;
-  border-style: solid;
-  border-color: darkgrey;
+	margin: 20px;
+	width: 200px;
+	float: right;
 }
 
 .finder-input {
-  padding: 5px 5px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 5px;
-  outline: none;
+	padding: 5px 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	outline: none;
+	border-style: hidden;
+	background-color: #ececec;
+	border-radius: 3px;
 }
 
-
 .finder-submit {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, "Advent Pro", Arial, Helvetica, sans-serif;
-  background-color: #4caf4f00;
-  border: none;
-  border-radius: 5px;
-  color: rgb(71, 168, 71);
-  padding: 5px 5px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  outline: none;
-  position: absolute;
-  top: 4px;
-  right: 5px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif,
+		"Advent Pro", Arial, Helvetica, sans-serif;
+	background-color: #4caf4f00;
+	border: none;
+	color: rgb(224 162 28);
+	padding: 5px 5px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	outline: none;
+	position: absolute;
+	top: 2px;
+	right: 5px;
 }
 
 .submit-form {
-  width: 180px;
-  position: relative;
-  margin: auto;
+	width: 180px;
+	position: relative;
+	margin: auto;
+	zoom: 90%;
 }
 
-.Summoner-name{
-  font-size: x-large;
-  font-weight: bold;
-  padding-bottom: 15px;
+.Summoner-name {
+	font-size: x-large;
+	font-weight: bold;
+	padding-bottom: 15px;
 }
 
-.Champion-body{
-  padding: 10px;
-  border-color: transparent;
-  border-style: solid;
-  background-color: #f7e5e8;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.Champion-body {
+	padding: 10px;
+	border-color: transparent;
+	border-style: solid;
+	background-color: #f7e5e8;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-.Champion-header{
-  font-size: smaller;
+.Champion-header {
+	font-size: smaller;
 }
 
-.Champion-row{
-  padding: 20px;
-  margin: auto;
-  padding-top: 5px;
+.Champion-row {
+	padding: 20px;
+	margin: auto;
+	padding-top: 5px;
 }
 
-.Champion-box{
-  display: inline-block;
-  min-width: 135px;
-  background-color: #ab8db185;
-  margin: 5px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-size: smaller;
-  border-style: solid;
-  border-color: darkgrey;
+.Champion-box {
+	display: inline-block;
+	min-width: 135px;
+	background-color: #ab8db185;
+	margin: 5px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: smaller;
+	border-style: solid;
+	border-color: darkgrey;
 }
 
-.Champion-icon{
-  height: 60px;
+.Champion-icon {
+	height: 60px;
 }
 
-.Item-icon{
-  height: 30px;
+.Item-icon {
+	height: 30px;
 }
 
-.Analysis-box{
-  margin-top: 10px;
+.Analysis-box {
+	margin-top: 10px;
 }
 
-.red{
-  color: red;
+.red {
+	color: red;
 }
 
-.green{
-  color: green;
+.green {
+	color: green;
 }
 
-p{
-  margin-block-start: 0;
-  margin-block-end: 0;
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
